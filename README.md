@@ -1,4 +1,5 @@
 #Bootstrap 3.0 Icon Picker
+我已经把iconPicker.js改成支持ie8支持了,但是iconPicker.min.js没有支持,我目前的环境只测试了ie8,ie 6 7请自行检查
 I have updated iconPicker.js for ie8 support,but iconPicker.min.js not.
 u can use iconpicker.js if u need to develop for ie8,and iconPicker.js also supported on other browsers.
 i just only tested on ie8,i think all version above ie6 support.
