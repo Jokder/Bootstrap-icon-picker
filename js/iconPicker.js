@@ -28,8 +28,9 @@
         	element=this;
             if(!settings.buttonOnly && $(this).data("iconPicker")==undefined ){
             	$this=$(this).addClass("form-control");
-            	$wraper=$("<div/>",{class:"input-group"});
+            	$wraper=$("<div/>");//remove object has property 'class,because of ie8 not support that.'
             	$this.wrap($wraper);
+		$wraper.addClass('input-group');//use addClass for ie8
 
             	$button=$("<span class=\"input-group-addon pointer\"><i class=\"glyphicon  glyphicon-picture\"></i></span>");
             	$this.after($button);
@@ -48,10 +49,10 @@
 	        		css: {
 		        		'top':$element.offset().top+$element.outerHeight()+6,
 		        		'left':$element.offset().left
-		        	},
-		        	class:'icon-popup'
+		        	}
+				//remove obj has property 'class',because of ie8 not support that.
 	        	})
-
+			$popup.addClass('icon-popup');//add this to fix ie8
 	        	$popup.html('<div class="ip-control"> \
 						          <ul> \
 						            <li><a href="javascript:;" class="btn" data-dir="-1"><span class="glyphicon  glyphicon-fast-backward"></span></a></li> \
